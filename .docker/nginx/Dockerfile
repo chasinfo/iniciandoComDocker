@@ -1,6 +1,6 @@
 FROM nginx:1.17.8-alpine
 
-RUN apk add --no-cache bash openssl dos2unix
+RUN apk add --no-cache openssl bash
 
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
