@@ -3,7 +3,7 @@ services:
   app:
     build: .
     container_name: app
-    entrypoint: ./.docker/entrypoint.sh
+    # entrypoint: ./.docker/entrypoint.sh
     volumes:
       - .:/var/www
     networks:
