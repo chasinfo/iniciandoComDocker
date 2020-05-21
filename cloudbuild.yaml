@@ -15,14 +15,14 @@ steps:
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','cp','.env.example','.env']
 
-  - id: "Rodamdp key:generate"
+  - id: "Executando o key:generate"
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','php','/var/www/artisan','key:generate']
 
-  - id: "Rodamdp migrations"
+  - id: "Criando as migrations"
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','php','/var/www/artisan','migrate']
 
-  - id: "Rodamdp phpunit"
+  - id: "Execultando o phpunit"
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','php','/var/www/vendor/bin/phpunit','-c','/var/www/phpunit.xml']
