@@ -11,9 +11,9 @@ steps:
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','composer','install']
 
-  - id: "Copiando o .env"
-    name: 'gcr.io/cloud-builders/docker'
-    args: ['exec','-t','app','cp','.env.example','.env']
+#  - id: "Copiando o .env"
+#    name: 'gcr.io/cloud-builders/docker'
+#    args: ['exec','-t','app','cp','.env.example','.env']
 
   - id: "Executando o key:generate"
     name: 'gcr.io/cloud-builders/docker'
