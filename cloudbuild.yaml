@@ -15,7 +15,7 @@ steps:
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','cp','.env.example','.env']
 
-  - id: "Executando o key:generate"
+  - id: "Gerando uma nova chave com key:generate"
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','php','/var/www/artisan','key:generate']
 
